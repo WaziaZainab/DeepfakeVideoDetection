@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #ffffff);
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background: #005792;
+    color: #fff;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+.highlight {
+    color: #005792;
+}
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.upload-section {
+    text-align: center;
+}
+.drop-container {
+    border: 2px dashed #005792;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: #f8fcff;
+}
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn.primary {
+    background: #005792;
+    color: white;
+}
+.btn.secondary {
+    background: #6c757d;
+    color: white;
+}
+.video-preview video {
+    width: 100%;
+    border-radius: 8px;
+}
+.badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.badge::before {
+    content: "🔍 ";
+}
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.history-table th, .history-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
