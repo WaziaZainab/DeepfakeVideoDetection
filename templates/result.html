@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        .prediction {
+            color: {% if prediction == 'Fake' %}red{% else %}green{% endif %};
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction: <span class="prediction">{{ prediction }}</span></h1>
+
+    <video width="480" controls>
+        <source src="{{ video_path }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <br><br>
+    <a href="/">Try another video</a>
+</body>
+</html>
+
+
