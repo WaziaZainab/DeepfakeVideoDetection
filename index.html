@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Deepfake Video Detection{% endblock %}
+{% block subtitle %}<span class="highlight">Deepfake Video Detection</span><br>Upload and Analyze your Video{% endblock %}
+{% block content %}
+<div class="upload-section">
+    <div class="drop-container" id="dropzone">
+        <div class="drop-message">
+            <i class="icon-upload">⬆</i>
+            <p>Drag & Drop your video here<br>or</p>
+            <button class="btn secondary" id="browseBtn" type="button">Browse Video</button>
+        </div>
+        <input type="file" id="fileInput" accept="video/*" style="display:none;">
+        <p class="supported">Supported Formats: MP4, AVI, MOV</p>
+    </div>
+    <button class="btn primary" id="analyzeBtn" disabled>Analyze Video</button>
+</div>
+
+<div class="video-preview" id="previewContainer" style="display:none;">
+    <h3>Preview</h3>
+    <video id="videoPreview" controls></video>
+</div>
+
+<div class="progress-container" id="progressWrap" style="display:none;">
+    <div class="progress-bar" id="progressBar"></div>
+    <span class="progress-text" id="progressText">0%</span>
+</div>
+
+<div class="result-card card" id="resultCard" style="display:none;">
+    <h2>Result</h2>
+    <p>Prediction: <span class="badge" id="predictionBadge">-</span></p>
+    <p>Confidence: <span id="confidenceText">-</span></p>
+    <p>Inference Time: <span id="timeText">-</span> sec</p>
+</div>
+
+<div class="history-card card" id="historyCard" style="display:none;">
+    <h2>Analysis History</h2>
+    <table class="history-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Filename</th>
+                <th>Label</th>
+                <th>Confidence</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody id="historyBody"></tbody>
+    </table>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}
